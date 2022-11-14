@@ -4,6 +4,8 @@ Welcome to Fux!
 Named after Joseph Johann Fux, Fux provides an API and later hopefully other functions for writing traditional species counterpoint
 as laid out in the seminal work Gradus ad Parnassum.
 '''
+
+#just a dictionary for pitch classes for translation
 pitch_classes = {
     0 : 'C',
     1 : 'C#',
@@ -22,6 +24,10 @@ pitch_classes = {
 #define note class, defined by octave, pitch class, duration
 class Note:
     def __init__(self, octave=4, pitch_class=0, length=1):
+        
+        assert octave in range(0, 9), 'Octaves are numbered 0-8'
+        assert pitch_class in range(0, 12), 'There are 12 pitch classes in traditional counterpoint, numbered 0-11.'
+        
         self.octave = octave
         self.pitch_class = pitch_class
         self.letter = pitch_classes[self.pitch_class]
@@ -89,6 +95,7 @@ class Stave:
         self.voices = {}
         self.number_of_voices = 0
         self.cantus_firmus = None
+        
         pass
     
     #add a voice

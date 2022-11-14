@@ -3,7 +3,7 @@
 
  # Todo
  - [x] implement a stave
- - [ ] implement rythm
+ - [x] implement rythm
  - [x] implement voices
    - [x] this includes notation for pitches
  - [ ] implement a way by which you can find distance between voices

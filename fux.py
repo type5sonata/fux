@@ -68,10 +68,18 @@ class Voice:
     
     def set_single_note(self, time: int, octave, pitch, length=1):
         if length != 1:
-            self.notes[time] = Note(octave, pitch)
+            # self.notes[time] = Note(octave, pitch)
             for i in range(length):
                 self.notes[time+i] = Slur(self.notes[time])
         self.notes[time] = Note(octave, pitch, length)
+        
+    def set_notes(self, source):
+        #one input type should be a list of touples
+        if type(source) == list:
+            #todo! slurs
+            for time, note in enumerate(source):
+                self.notes[time] = Note(note[0], note[1])
+        print (f'Notes successfully set from {source}!')
 
 #finally, define a Stave, which will include Voices
 #for now, Voices will all start at 0     

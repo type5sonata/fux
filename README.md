@@ -2,10 +2,10 @@
  A counterpoint helper and generator.
 
  # Todo
- - [ ] implement a stave
+ - [x] implement a stave
  - [ ] implement rythm
- - [ ] implement voices
-   - [ ] this includes notation for pitches
+ - [x] implement voices
+   - [x] this includes notation for pitches
  - [ ] implement a way by which you can find distance between voices
  - [ ] check for direction of motion
  - [ ] check for leaps and steps
@@ -15,6 +15,6 @@
    - [ ] 3rd species
    - [ ] 4th species
    - [ ] 5th species
- - [ ] midi / sheet music export
+ - [ ] midi / sheet music support
  - [ ] GUI
  - [ ] web interface

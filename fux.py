@@ -104,6 +104,8 @@ class Stave:
         for moment in range(self.length):
             print(f'Time {moment}')
             for voice in self.voices:
-                print(f'\t{voice}: {self.voices[voice].display(moment)}')
-                
+                if self.voices[voice] != self.cantus_firmus:
+                    print(f'\t{voice}: {self.voices[voice].display(moment)}')
+                else:
+                    print(f'*\t{voice}: {self.voices[voice].display(moment)}')
         pass

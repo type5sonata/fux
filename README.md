@@ -19,3 +19,11 @@
  - [ ] midi / sheet music support
  - [ ] GUI
  - [ ] web interface
+
+# Brain dump
+* we have the object 'note'
+* the 'note' objects are organised into a 'voice', which has a timeline and notes inserted into it
+  * current problem I see is that time values are too short and that is not ideal
+  * also it is a bit clumsy (the way I implemented time is not ideal)
+* the 'voice' objects are organised into a Stave, but this should really be a Composition
+* lets start from the beginning!
